@@ -1,0 +1,19 @@
+server:
+  port: ${PORT_NUM}
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  profiles:
+    include:
+      - oauth
+      - db
+      - mail
+      - file
+      - aws
+
+jwt:
+  secret: ${JWT_SECRET}
